@@ -10,11 +10,11 @@ public class SlownikBConfig {
     @Bean
     public CommandLineRunner initb1(){
         System.out.println("BBBB");
-        return args -> {System.out.println(args);};
+        return System.out::println;
     }
     @Bean
     public CommandLineRunner initb2(){
         System.out.println("BB22");
-        return args -> {System.out.println(args);};
+        return args -> System.out.println(args);
     }
 }

@@ -21,10 +21,6 @@ public class SlownikAService {
 
     public PozycjaSlownikaA getPozycjaByNazwa(String nazwa) {
         Optional<PozycjaSlownikaA> pozycja = slownikArepository.getAll().stream().filter(s -> s.getNazwa().equals(nazwa)).findFirst();
-        if (pozycja.isPresent()) {
-            return pozycja.get();
-        } else {
-            return null;
-        }
+        return pozycja.orElse(null);
     }
 }
