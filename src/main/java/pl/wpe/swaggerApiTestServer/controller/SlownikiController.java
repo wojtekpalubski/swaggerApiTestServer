@@ -20,6 +20,7 @@ public class SlownikiController {
 
     @GetMapping(value = "/slownik/A", produces = "application/json")
     public List<PozycjaSlownikaA> getSlownikA() {
+        System.out.println("Pobranie calego slownika A");
         return slownikAService.getAll();
     }
 
